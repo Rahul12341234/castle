@@ -4,6 +4,7 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
 var land, pillar, pillar1, pillar2, pillar3, tower, tower1, tower2, tower3, tower4, tower5, castle, castle1, castle2, castle3;
+var boulder;
 function setup() {
   createCanvas(800,400);
 
@@ -25,7 +26,8 @@ function setup() {
   castle1 = new box(450, -30, 10, 100);
   castle2 = new box(550, -30, 10, 100);
   castle3 = new box(500, -50, 160, 10);
-
+  
+  boulder = new ball(500, -20, 30);
 
   land = new ground(400, 390, 800, 10);
   
@@ -48,5 +50,6 @@ function draw() {
   castle1.display();
   castle2.display();
   castle3.display();
+  boulder.display();
   land.display();
 }
